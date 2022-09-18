@@ -11,39 +11,52 @@
         <fieldset>
             <legend>Infomations Personelles</legend>
             <label for="Name">Nom</label>
-                <input type="text" id="Name">
+                <input type="text" id="Name" placeholder="Nom" required minlength="2" autofocus>
             <label for="Firstname">Prénom</label>
-                <input type="text" id="Firstname">
+                <input type="text" id="Firstname" placeholder="Prénom" required minlength="2"><br/>
             <label for="age">Âge</label>
-                <input type="number" name="age" id="age">
+                <input type="number" name="age" id="age" placeholder="Âge"><br/>
             <label for="sexe">Sexe</label>
-                <input type="radio" name="sexe" id="sexe">
+                <input type="radio" name="sexe" id="sexe" checked>
                     <label for="sexe">Homme</label>
                 <input type="radio" name="sexe" id="sexef">
-                    <label for="sexef">Femme</label>
+                    <label for="sexef">Femme</label><br/>
             <label for="Email">Adresse Email</label>
-                <input type="email" name="Email" id="Email">
+                <input type="email" name="Email" id="Email" placeholder="exemple.email@gmail.com" required><br/>
             <label for="Adresse">Adresse postale</label>
-                <input type="text" id="Adresse">
+                <input type="text" id="Adresse" placeholder="Adresse Postale"><br/>
             <label for="Ville">Ville</label>
-                <input type="text" id="Ville">
+                <input type="text" id="Ville" placeholder="Villes" required><br/>
+            <label for="codep">Code postales</label>
+                <input type="text" name="codep" id="codep" placeholder="ex:59000" size="5" maxlength="5" required pattern="[0-9]{5}"><br/>
             <label for="Métier">Métier exercé</label>
-                <input type="text" id="Métier">
+                <input type="text" id="Métier"><br/>
             <label for="Nationalité">Nationalité</label>
-                <input type="text" id="Nationalité">
-            <label for="birthday"></label>
-                <input type="date" name="birthday" id="birthday">
+                <input type="text" id="Nationalité"><br/>
+            <label for="birthday">Date de naissance</label>
+                <input type="date" name="birthday" id="birthday"><br/>
             <label for="Pays">Pays de naissance</label>
-                <input type="text" id="Pays">
-            <label for="Sécu"></label>
-                <input type="number" name="Sécu" id="Sécu">
-            <label for="NuméroPass"></label>
-                <input type="text" id="NuméroPass">
-            <label for="datePass"></label>
-                <input type="date" name="datePass" id="datePass">
-            <label for="dateValPass"></label>
-                <input type="date" name="dateValPass" id="dateValPass">
+                <input type="text" id="Pays" list="payslist" placeholder="Pays de naissance">
+                    <datalist id="payslist">
+                        <option value="France"></option>
+                        <option value="Allemagne"></option>
+                        <option value="Angleterre"></option>
+                        <option value="Belgique"></option>
+                        <option value="Japon"></option>
+                        <option value="Espagne"></option>
+                        <option value="Portugal"></option>
+                        <option value="Chine"></option>
+                </datalist><br/>
+            <label for="Sécu">Numéro de sécurité social</label>
+                <input type="text" name="Sécu" id="Sécu" maxlength="15" required pattern="[0-9]{15}"><br/>
+           <label for="NuméroPass">Numéro du passeport</label>
+                <input type="text" id="NuméroPass" required minlength="9" maxlength="9"><br/>
+            <label for="datePass">Date de délivrance du passeport</label>
+                <input type="date" name="datePass" id="datePass"><br/>
+            <label for="dateValPass">Date de validité du passeport</label>
+                <input type="date" name="dateValPass" id="dateValPass"><br/>
         </fieldset>
+        <input type="submit" value="envoyer">
     </form>
     
 </body>
