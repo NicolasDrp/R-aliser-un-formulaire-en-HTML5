@@ -10,40 +10,61 @@
     <form>
         <fieldset>
             <legend>Infomations Personelles</legend>
-            <label for="Name">Nom</label>
-                <input type="text" id="Name">
-            <label for="Firstname">Prénom</label>
-                <input type="text" id="Firstname">
-            <label for="age">Âge</label>
-                <input type="number" name="age" id="age">
-            <label for="sexe">Sexe</label>
-                <input type="radio" name="sexe" id="sexe">
+            <label for="Name">Nom:</label>
+                <input type="text" id="Name" required minlength="2" autofocus>
+            <label for="Firstname">Prénom:</label>
+                <input type="text" id="Firstname" required minlength="2"><br/>
+            <label for="age">Âge:</label>
+                <input type="number" name="age" id="age" required><br/>
+            <label for="birthday">Date de naissance:</label>
+                <input type="date" name="birthday" id="birthday" required><br/>
+            <label for="sexe" >Sexe:</label>
+                <input type="radio" name="sexe" id="sexe" checked>
                     <label for="sexe">Homme</label>
                 <input type="radio" name="sexe" id="sexef">
-                    <label for="sexef">Femme</label>
-            <label for="Email">Adresse Email</label>
-                <input type="email" name="Email" id="Email">
-            <label for="Adresse">Adresse postale</label>
-                <input type="text" id="Adresse">
-            <label for="Ville">Ville</label>
-                <input type="text" id="Ville">
-            <label for="Métier">Métier exercé</label>
-                <input type="text" id="Métier">
-            <label for="Nationalité">Nationalité</label>
-                <input type="text" id="Nationalité">
-            <label for="birthday"></label>
-                <input type="date" name="birthday" id="birthday">
-            <label for="Pays">Pays de naissance</label>
-                <input type="text" id="Pays">
-            <label for="Sécu"></label>
-                <input type="number" name="Sécu" id="Sécu">
-            <label for="NuméroPass"></label>
-                <input type="text" id="NuméroPass">
-            <label for="datePass"></label>
-                <input type="date" name="datePass" id="datePass">
-            <label for="dateValPass"></label>
-                <input type="date" name="dateValPass" id="dateValPass">
+                    <label for="sexef">Femme</label><br/>
+            <label for="Email">Adresse Email:</label>
+                <input type="email" name="Email" id="Email" placeholder="exemple.email@gmail.com" required><br/>
+            <label for="Adresse">Adresse postale:</label>
+                <input type="text" id="Adresse" required><br/>
+            <label for="Ville">Ville:</label>
+                <input type="text" id="Ville" required><br/>
+            <label for="codep">Code postales:</label>
+                <input type="text" name="codep" id="codep" placeholder="ex:59000" size="6" maxlength="5" required pattern="[0-9]{5}"><br/>
+            <label for="Nationalité">Nationalité:</label>
+                <input type="text" id="Nationalité" required><br/>
+            <label for="Métier">Métier exercé:</label>
+                <select id="Métier">
+                    <option value="Développeur Front-end">Développeur Front-end</option>
+                    <option value="Développeur Back-end">Développeur Back-end</option>
+                    <option value="Formateur pour les deux d'avant">Formateur pour les deux d'avant</option>
+                    <option value="Administrateur base de données">Administrateur base de données</option>
+                    <option value="Chef de projet web">Chef de projet web</option>
+                    <option value="Designer UX/UI">Designer UX/UI</option>
+                    <option value="Développeur Full Stack">Développeur Full Stack</option>
+                    <option value="Sans emploi">Sans emploi</option>
+                </select><br/>
+            <label for="payslist">Pays de naissance:</label>
+                <select id="payslist">
+                    <option value="France">France</option>
+                    <option value="Allemagne">Allemagne</option>
+                    <option value="Angleterre">Angleterre</option>
+                    <option value="Belgique">Belgique</option>
+                    <option value="Japon">Japon</option>
+                    <option value="Espagne">Espagne</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Chine">Chine</option>
+                </select><br/>
+            <label for="Sécu">Numéro de sécurité social:</label>
+                <input type="text" name="Sécu" id="Sécu" maxlength="15" required pattern="[0-9]{15}"><br/>
+           <label for="NuméroPass">Numéro du passeport:</label>
+                <input type="text" id="NuméroPass" required minlength="9" maxlength="9"><br/>
+            <label for="datePass">Date de délivrance du passeport:</label>
+                <input type="date" name="datePass" id="datePass" required><br/>
+            <label for="dateValPass">Date de validité du passeport:</label>
+                <input type="date" name="dateValPass" id="dateValPass" required><br/>
         </fieldset>
+        <input type="submit" value="envoyer">
     </form>
     
 </body>
